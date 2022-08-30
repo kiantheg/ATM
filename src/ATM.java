@@ -16,7 +16,7 @@ public class ATM {
 	}
 	
 	public void closeAccount (int accNum) {
-		if (accounts.get(accNum)==0.0) {
+		if (accounts.containsKey(accNum)&&accounts.get(accNum)==0.0) {
 			accounts.remove(accNum);
 		}
 	}
