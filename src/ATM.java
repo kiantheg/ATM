@@ -22,7 +22,10 @@ public class ATM {
 	}
 	
 	public double checkBalance (int accNum) {
-		return accounts.get(accNum);
+		if (accounts.containsKey(accNum)) {
+			return accounts.get(accNum);
+		}
+		return 0.0;
 	}
 	
 	public boolean depositMoney (int accNum, double dep) {
