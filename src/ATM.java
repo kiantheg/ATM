@@ -37,7 +37,7 @@ public class ATM {
 	}
 	
 	public boolean withdrawMoney (int accNum, double with) {
-		if (accounts.containsKey(accNum)) {
+		if (accounts.containsKey(accNum)&&with<=checkBalance(accNum)&&with>=0) {
 			accounts.put(accNum, accounts.get(accNum) - with);
 			return true;
 		}
