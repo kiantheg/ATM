@@ -1,4 +1,5 @@
 import java.util.*;
+import java.math.*;
 
 public class ATM {
 	private HashMap<Integer, Double> accounts; 
@@ -23,7 +24,7 @@ public class ATM {
 	
 	public double checkBalance (int accNum) {
 		if (accounts.containsKey(accNum)) {
-			return accounts.get(accNum);
+			return Math.round((100*accounts.get(accNum)))/100.0;
 		}
 		return 0.0;
 	}
