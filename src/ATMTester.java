@@ -35,7 +35,8 @@ public class ATMTester {
 		System.out.println(chase.checkBalance(21504)); // Should be 0.0
 		// Test other issues
 		chase.withdrawMoney(00002, 2020.2);
-		System.out.println(chase.checkBalance(00002)); // Should be 634.1 and 
+		System.out.println(chase.checkBalance(00002)); // Should be 634.1 and not a fraction more!
+		
 		chase.withdrawMoney(00001, 667.23); //withdraw all money in account to close it
 		System.out.println(chase.checkBalance(00001)); //checking if balance is 0
 		chase.closeAccount(00001); // closing account
