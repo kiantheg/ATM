@@ -1,5 +1,4 @@
 import java.util.*;
-import java.math.*;
 
 public class ATM {
 	private HashMap<Integer, Double> accounts; 
@@ -30,7 +29,7 @@ public class ATM {
 	}
 	
 	public boolean depositMoney (int accNum, double dep) {
-		if (accounts.containsKey(accNum)) {
+		if (accounts.containsKey(accNum)&&dep>=0) {
 			accounts.put(accNum, accounts.get(accNum) + dep);
 			return true;
 		}

@@ -36,5 +36,11 @@ public class ATMTester {
 		// Test other issues
 		chase.withdrawMoney(00002, 2020.2);
 		System.out.println(chase.checkBalance(00002)); // Should be 634.1 and 
+		chase.withdrawMoney(00001, 667.23);
+		System.out.println(chase.checkBalance(00001));
+		chase.closeAccount(00001);
+		System.out.println(chase.withdrawMoney(00001, 100.2));
+		System.out.println(chase.depositMoney(00001, 220201.1));
+		System.out.println(chase.checkBalance(00001));
 	}
 }
